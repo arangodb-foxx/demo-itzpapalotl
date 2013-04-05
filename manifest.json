@@ -1,0 +1,9 @@
+{
+  "name": "itzpapalotl",
+  "version": "0.0.1",
+  "description": "random aztec god service",
+
+  "apps": {
+    "/": "itzpapalotl.js"
+  }
+}
