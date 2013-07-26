@@ -33,7 +33,7 @@
 
   // Initialise a new FoxxApplication.
   var FoxxApplication = require("org/arangodb/foxx").Application,
-  app = new FoxxApplication();
+  app = new FoxxApplication(applicationContext);
 
   // install route
   app.get('/random', function (req, res) {
@@ -71,8 +71,5 @@
     var idx = Math.round(Math.random() * (gods.length - 1));
     res.json({ name: gods[idx] });
   });
-
-  // Remember to give the applicationContext.
-  app.start(applicationContext);
 }());
 
