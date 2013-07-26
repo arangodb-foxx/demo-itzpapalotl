@@ -1,6 +1,7 @@
 {
   "name": "itzpapalotl",
   "version": "0.0.2",
+  "author": "jsteemann",
   "description": "random aztec god service",
 
   "apps": {
