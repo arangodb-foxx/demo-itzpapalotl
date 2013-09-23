@@ -32,11 +32,11 @@
   "use strict";
 
   // Initialise a new FoxxApplication.
-  var FoxxApplication = require("org/arangodb/foxx").Application,
-  app = new FoxxApplication(applicationContext);
+  var FoxxApplication = require("org/arangodb/foxx").Controller,
+  controller = new FoxxApplication(applicationContext);
 
   // install route
-  app.get('/random', function (req, res) {
+  controller.get('/random', function (req, res) {
     var gods = [
       "CentzonTotochtin",
       "Chalchihuitlicue",
