@@ -42,7 +42,10 @@
   // we also need this module for custom responses
   var actions = require("org/arangodb/actions");
 
-  // our app is about the following Aztec gods:
+  // use joi for validation 
+  var joi = require("joi");
+
+  // our app is about the following Aztec deities:
   var deities = [
     "CentzonTotochtin",
     "Chalchihuitlicue",
@@ -99,8 +102,8 @@
   })
   .summary("returns a random deity name");
   
-  // install god-specific route for summoning
-  // god name is passed as part of the URL
+  // install deity-specific route for summoning
+  // deity name is passed as part of the URL
   controller.get('/:deity/summon', function (req, res) {
     var deity = req.params("deity");
 
@@ -117,7 +120,7 @@
   })
   .summary("summons the requested deity")
   .pathParam("deity", {
-    type: "string"
+    type: joi.string().required()
   })
   .errorResponse(
     Error, actions.HTTP_NOT_FOUND, "The requested deity could not be found", function(e) {
