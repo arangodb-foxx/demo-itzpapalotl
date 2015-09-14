@@ -1,11 +1,15 @@
 {
   "name": "itzpapalotl",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "author": "jsteemann",
   "description": "random aztec god service",
 
   "controllers": {
     "/": "itzpapalotl.js"
+  },
+
+  "engines": {
+    "arangodb": "~2.7"
   },
 
   "defaultDocument": "index"
